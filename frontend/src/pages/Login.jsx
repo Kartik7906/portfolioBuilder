@@ -41,7 +41,7 @@ const Login = () => {
 
     setLoading(true);
     try {
-      const response = await fetch("https://link-tree-1-at5n.onrender.com/api/auth/login", {
+      const response = await fetch("https://portfoliobuilder-g340.onrender.com/api/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -72,7 +72,7 @@ const Login = () => {
 const handleAddLink = async (e) => { // Renamed function
   e.preventDefault();
   try {
-    const response = await axios.post("https://link-tree-1-at5n.onrender.com/api/auth/add-link", {
+    const response = await axios.post("https://portfoliobuilder-g340.onrender.com/api/auth/add-link", {
       title: linkTitle,
       url: linkUrl,
       icon: selectedIcon,

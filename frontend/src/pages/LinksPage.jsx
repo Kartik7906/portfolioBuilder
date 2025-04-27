@@ -218,7 +218,7 @@ const [enabledLinks, setEnabledLinks] = useState(
 
     // Save the link or shop link to the backend
     try {
-      const response = await axios.post("https://link-tree-1-at5n.onrender.com/api/auth/add-link", {
+      const response = await axios.post("https://portfoliobuilder-g340.onrender.com/api/auth/add-link", {
         title: linkTitle,
         url: linkUrl,
         icon: activeButton === "link" ? selectedIcon : null, // Only include icon for links
@@ -253,7 +253,7 @@ const [enabledLinks, setEnabledLinks] = useState(
   useEffect(() => {
     const fetchUserInfo = async () => {
       try {
-        const response = await axios.get("https://link-tree-1-at5n.onrender.com/api/auth/user-info", {
+        const response = await axios.get("https://portfoliobuilder-g340.onrender.com/api/auth/user-info", {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
@@ -295,7 +295,7 @@ const [enabledLinks, setEnabledLinks] = useState(
   const fetchProfileImage = async () => {
     try {
       const token = localStorage.getItem("token"); // Get token from local storage
-      const response = await axios.get("https://link-tree-1-at5n.onrender.com/api/auth/profile-image", {
+      const response = await axios.get("https://portfoliobuilder-g340.onrender.com/api/auth/profile-image", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -319,7 +319,7 @@ const [enabledLinks, setEnabledLinks] = useState(
     }
 
     try {
-      const response = await axios.patch("https://link-tree-1-at5n.onrender.com/api/auth/update-user", {
+      const response = await axios.patch("https://portfoliobuilder-g340.onrender.com/api/auth/update-user", {
         ...userInfo,
         password, // Include password in the update request
       }, {
@@ -360,7 +360,7 @@ const handleCustomColorChange = (e) => {
 
     // Save the shop link to the backend
     try {
-      const response = await axios.post("https://link-tree-1-at5n.onrender.com/api/auth/add-link", {
+      const response = await axios.post("https://portfoliobuilder-g340.onrender.com/api/auth/add-link", {
         title: linkTitle,
         url: linkUrl,
         icon: null, // No icon for shop links
@@ -439,7 +439,7 @@ const setActiveTab = (tab) => {
       try {
         // Upload the image to the backend
         const response = await axios.post(
-          "https://link-tree-1-at5n.onrender.com/api/auth/upload-profile-image",
+          "https://portfoliobuilder-g340.onrender.com/api/auth/upload-profile-image",
           formData,
           {
             headers: {
@@ -473,7 +473,7 @@ const setActiveTab = (tab) => {
       console.log("Banner Color:", bannerColor); // Log the banner color
 
       // Update nickname
-      const nicknameResponse = await axios.patch("https://link-tree-1-at5n.onrender.com/api/auth/update-nickname", {
+      const nicknameResponse = await axios.patch("https://portfoliobuilder-g340.onrender.com/api/auth/update-nickname", {
         nickname: profileTitle,
       }, {
         headers: {
@@ -482,7 +482,7 @@ const setActiveTab = (tab) => {
       });
   
       // Update bio
-      const bioResponse = await axios.patch("https://link-tree-1-at5n.onrender.com/api/auth/update-bio", {
+      const bioResponse = await axios.patch("https://portfoliobuilder-g340.onrender.com/api/auth/update-bio", {
         bio: bio,
       }, {
         headers: {
@@ -491,7 +491,7 @@ const setActiveTab = (tab) => {
       });
   
       // Update banner color
-      await axios.patch("https://link-tree-1-at5n.onrender.com/api/auth/update-banner", {
+      await axios.patch("https://portfoliobuilder-g340.onrender.com/api/auth/update-banner", {
         bannerColor: bannerColor, // Send the selected banner color to the backend
       }, {
         headers: {
@@ -516,7 +516,7 @@ const setActiveTab = (tab) => {
   
   const fetchLinks = async () => {
     try {
-      const response = await axios.get("https://link-tree-1-at5n.onrender.com/api/auth/user-links", {
+      const response = await axios.get("https://portfoliobuilder-g340.onrender.com/api/auth/user-links", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -533,7 +533,7 @@ const setActiveTab = (tab) => {
 
   const handleDeleteLink = async (linkId) => {
     try {
-      const response = await axios.delete(`https://link-tree-1-at5n.onrender.com/api/auth/links/${linkId}`, {
+      const response = await axios.delete(`https://portfoliobuilder-g340.onrender.com/api/auth/links/${linkId}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -548,7 +548,7 @@ const setActiveTab = (tab) => {
 
   const generateUniqueLink = () => {
     const formattedNickname = userInfo.nickname.replace(/\s+/g, '-').toLowerCase(); // Format the nickname for the URL
-    return `https://link-tree-flax.vercel.app/preview/${formattedNickname}`; // Generate the unique link
+    return `https://portfoliobuilder-g340.onrender.com/preview/${formattedNickname}`; // Generate the unique link
   };
 
   const handleShareClick = () => {
@@ -695,7 +695,7 @@ const setActiveTab = (tab) => {
   const saveSettings = async () => {
     try {
       // Save layout
-      await axios.post("https://link-tree-1-at5n.onrender.com/api/auth/save-layout", {
+      await axios.post("https://portfoliobuilder-g340.onrender.com/api/auth/save-layout", {
         layout: selectedLayout, // Send the selected layout type
       }, {
         headers: {
@@ -704,7 +704,7 @@ const setActiveTab = (tab) => {
       });
   
       // Save font settings
-      await axios.patch("https://link-tree-1-at5n.onrender.com/api/auth/save-font", {
+      await axios.patch("https://portfoliobuilder-g340.onrender.com/api/auth/save-font", {
         font: selectedFont, // Send the selected font style
         color: selectedColor, // Send the selected font color
       }, {
@@ -714,7 +714,7 @@ const setActiveTab = (tab) => {
       });
   
       // Save button background color
-      await axios.patch("https://link-tree-1-at5n.onrender.com/api/auth/save-button-color", {
+      await axios.patch("https://portfoliobuilder-g340.onrender.com/api/auth/save-button-color", {
         buttonBackgroundColor: fillColor, // Send the selected button background color
       }, {
         headers: {
@@ -724,7 +724,7 @@ const setActiveTab = (tab) => {
   
 
  // Save theme color
- await axios.patch("https://link-tree-1-at5n.onrender.com/api/auth/save-theme-color", {
+ await axios.patch("https://portfoliobuilder-g340.onrender.com/api/auth/save-theme-color", {
   themeColor: selectedThemeColor, // Send the selected theme color
 }, {
   headers: {
@@ -734,7 +734,7 @@ const setActiveTab = (tab) => {
 
 
     // Save button styles
-    await axios.patch("https://link-tree-1-at5n.onrender.com/api/auth/save-button-styles", {
+    await axios.patch("https://portfoliobuilder-g340.onrender.com/api/auth/save-button-styles", {
       buttonStyles: selectedButtonStyle, // Send the selected button styles
     }, {
       headers: {
