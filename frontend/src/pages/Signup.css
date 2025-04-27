@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+html, body {
+    overflow: hidden;
+  }
+* {
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+/* Main container - Full viewport height */
+.signup-container {
+  display: flex;
+  width: 100vw;
+  
+}
+
+/* Left Section */
+.signup-left {
+  width: 75%;
+  padding: 2rem 3rem;
+  position: relative;
+}
+
+/* Right Section */
+.signup-right {
+  width: 45%;
+}
+
+/* Right Image - Cover full section */
+.right-img {
+  margin-bottom: -10px;
+  width: 100%;
+  height: 100%;
+}
+
+/* Hide scrollbar for the entire page */
+
+body {
+  overflow: auto; /* Allow scrolling on the body */
+  height: 100vh; /* Ensure body takes full height */
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Logo - Stays at top left */
+.logo {
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+/* Centering Signup Box inside Left Section */
+.signup-box {
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto; /* Center horizontally */
+}
+
+/* Headings */
+.signup-box h1 {
+  font-family: Poppins;
+  font-weight: 800;
+  font-size: 45px;
+  line-height: 57.6px;
+  letter-spacing: -2px;
+  margin-top: 60px;
+  width: 105%;
+}
+
+/* Sign-in Toggle */
+.auth-toggle {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  margin-top: 25px;
+  margin-left: 36px;
+  margin-right: 36px;
+  align-items: center;
+}
+
+.active {
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 33.83px;
+  letter-spacing: 0%;
+}
+
+.auth-toggle .signin {
+  color: #28A263;
+  cursor: pointer;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 11.28px;
+  line-height: 16.91px;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: Auto;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  width: 84%;
+  margin-left: 36px;
+  margin-right: 36px;
+}
+
+.signup-box label {
+  font-weight: 500;
+  font-size: 13px;
+  color: #666666;
+}
+.terms label{
+    color: #3D3D3D;
+    font-family: Poppins;
+font-weight: 400;
+font-size: 11px;
+line-height: 16.5px;
+
+
+}
+.signup-box input {
+  height: 38px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 12px;
+  font-size: 1rem;
+  
+}
+
+/* Terms Section */
+.terms {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  margin: 12px 0;
+}
+
+.terms input {
+  margin-right: 8px;
+
+}
+.terms input {
+  width: 12px;
+  height: 12px;
+  appearance: none;
+  border: 1px solid #111111ba;
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+  padding: 3px 4px 0px 0;
+  margin-top: -5px;
+  transition: background-color 0.2sease, border-color 0.2sease;
+}
+  
+  /* Change background color when checked */
+  .terms input:checked {
+    background-color: #111; /* Black background when checked */
+    border-color: #111; 
+    padding: 10px 10px 0px 0;
+    margin-top: -5px;
+  }
+  
+  /* Optional: Add a checkmark inside the box */
+  .terms input:checked::after {
+    content: '✔'; /* Unicode checkmark */
+    font-size: 10px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+
+  }
+.terms a {
+  color: #28A263;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: Poppins;
+font-weight: 400;
+font-size: 11px;
+line-height: 16.5px;
+letter-spacing: 0%;
+text-decoration: underline;
+text-decoration-style: solid;
+text-decoration-thickness: Auto;
+
+}
+
+/* Signup Button */
+.signup-btn {
+  color: #ffffff;
+  padding: 12px;
+  background-color: #111111;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 12px;
+  width: 376px;
+  height: 45px;
+  opacity: 0.25;
+  border-radius: 28.19px;
+  transition: opacity 0.3s ease, background-color 0.3s ease, transform 0.2s ease;
+
+}
+.signup-btn:hover {
+    opacity: 1; /* Make button fully visible */
+    background-color: #28A263; /* Change color on hover */
+    transform: scale(1.05); /* Slightly enlarge the button */
+  }
+/* Recaptcha */
+.recaptcha {
+  margin-top: 160px;
+  color: #676B5F;
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  margin-left: -120px;
+  margin-right: -120px;
+  
+}
+
+.recaptcha a {
+  color: #4CAF50;
+}
+
+.error-msg {
+  color: red;
+  font-size: 14px;
+  margin-top: 2px;
+}
+
+.general {
+  text-align: center;
+  margin-top: 10px;
+}

@@ -1,0 +1,54 @@
+// routes/authRoutes.js
+const express = require("express");
+const { signup, loginUser ,
+    saveNickname, 
+    updateNickname, 
+    getUserInfo,
+    updateUser ,
+    uploadProfileImage ,
+    getProfileImage,
+    updateBio,
+    addLink, 
+    getUserLinks,
+    deleteLink,
+    updateBannerColor,
+    editLinkUrl, 
+    countLinkClick ,
+    saveLayout,
+    saveFontSettings,
+    saveButtonBackgroundColor,
+    saveButtonStyles,
+    saveThemeColor,
+    
+ } = require("../controllers/authController");
+const { authMiddleware } = require("../middleware/authMiddleware");
+const upload = require('../middleware/multerStorage'); // Import the multer middleware
+
+const router = express.Router();
+
+// Multer setup for image uploads
+
+
+router.post("/signup", signup);
+router.post("/login", loginUser );
+router.post("/save-nickname", authMiddleware, saveNickname);
+router.patch("/update-nickname", authMiddleware, updateNickname); 
+router.patch("/update-bio", authMiddleware, updateBio); // New endpoint for updating bio
+router.get("/user-info", authMiddleware, getUserInfo);
+router.patch("/update-user", authMiddleware, updateUser );
+router.post('/upload-profile-image', authMiddleware, upload.single('image'), uploadProfileImage); // New route for uploading profile image
+router.get("/profile-image", authMiddleware, getProfileImage); // Fetch profile image
+router.post('/add-link', authMiddleware, addLink);
+router.get('/user-links', authMiddleware, getUserLinks);
+router.delete("/links/:id", authMiddleware, deleteLink);
+router.patch("/update-banner", authMiddleware, updateBannerColor);
+router.patch("/edit-link/:id", authMiddleware, editLinkUrl);
+router.post("/count-click/:id", authMiddleware, countLinkClick);
+router.post('/save-layout', authMiddleware, saveLayout);
+router.patch('/save-font', authMiddleware, saveFontSettings);
+router.patch('/save-button-color', authMiddleware, saveButtonBackgroundColor);
+router.patch('/save-button-styles', authMiddleware, saveButtonStyles);
+router.patch('/save-theme-color',  authMiddleware, saveThemeColor);
+
+
+module.exports = router;

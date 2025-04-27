@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+}
+
+/* Ensure full-page layout */
+html, body {
+    width: 100%;
+    height: 100%;
+
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Dashboard Container */
+
+/* Dashboard Container */
+.dashboard-containers {
+    display: flex;
+    background-color: #ffffff;
+
+    width: 100vw;
+    min-height: 100vh;
+    overflow: auto; /* Allows full-page scrolling */
+}
+
+/* Left Section (Main Content) */
+.dashboard-content {
+    width: 75%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    min-height: 100vh; /* Ensures full height */
+}
+
+.dashboard-content {
+    display: flex;
+    flex-direction: column;
+    text-align: left; /* Ensures text aligns to the left */
+    padding: 40px;
+    justify-content: stretch;
+    min-height: 100vh; /* Ensures full height */
+    position: relative;
+}
+
+/* Form Wrapper (Centers only the form content) */
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers form content */
+    align-items: flex-start; /* Aligns to the left */
+    width: 75%;
+}
+.form-wrapper input{
+    width: 100%;
+    padding: 20px;
+    border: none;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+/* Logo at Top Left */
+.dashboard-logo {
+    align-self: flex-start; /* Keeps it at the top */
+    width: 120px; /* Adjust size */
+    margin-bottom: 20px;
+}
+
+/* Right Side Image */
+.dashboard-right {
+    width: 40%;
+    min-height: 100vh; /* Ensure full height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-img2 {
+    width: 100%;
+    height: 100%;
+}
+/* Title and Description */
+.form-wrapper h1 {
+font-weight: 800;
+font-size: 48px;
+line-height: 57.6px;
+margin-top: 70px;
+letter-spacing: -2px;
+width: 120%;
+}
+
+.wrapper-p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.32px;
+    color: #676B5F;
+    margin-bottom: 18px;
+    margin-top: 5px;
+}
+
+/* Input Box */
+.input-box {
+    padding: 12px;
+    border: 1px solid #cccccc00;
+    border-radius: 8px;
+    margin: 15px 0;
+    font-size: 14px;
+    background-color: #F6F7F5;
+color: #000000;
+height: 5px;
+}
+
+/* Category Section */
+.category-title {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-top: 18px;
+    color: #000000;
+}
+
+.category-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    max-width: 700px;
+}
+
+/* Category Button */
+.category-btn {
+    padding: 7px 17px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 1rem;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    height: 40px;
+
+}
+.continue-container{
+    width: 75%;
+}
+.category-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.category-btn.selected {
+    background-color: #28A263;
+    color: white;
+}
+
+.category-icon {
+    margin-right: 9px;
+    background: transparent;
+}
+
+
+
+/* Continue Button */
+.continue-btn {
+    background: #28A263;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    margin-top: 60px;
+    width: 100%;
+border-radius: 64px;
+transition: opacity 0.3s ease, background-color 0.3s ease, transform 0.2s ease;
+
+}
+
+.continue-btn:hover {
+    background-color: #28A263;
+    color: white;
+    transform: scale(1.05); /* Slightly enlarge the button */
+  }
+
+/* Right Side Image */
+.dashboard-right {
+    width: 40%;
+    min-height: 100vh; /* Ensure full height */
+   
+    background-size: cover;
+    background-position: center;
+}
+
+/* Responsive Design */
+

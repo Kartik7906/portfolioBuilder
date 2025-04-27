@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.login-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Left Section */
+.login-left {
+  width: 75%;
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers content horizontally */
+  justify-content: center; /* Centers content vertically */
+  position: relative;
+  height: 100vh; /* Full height */
+}
+
+/* Wrapper to keep login box centered and reCAPTCHA at bottom */
+.login-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 80%;
+  width: 100%;
+}
+
+/* Logo positioned at the top-left */
+.logo {
+  position: absolute;
+  top: 2rem;
+  left: 3rem;
+}
+
+/* Centered login box */
+.login-box {
+  max-width: 470px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.login-box h1 {
+  margin-bottom: 45px;
+  margin-top: 60px;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 57.6px;
+  letter-spacing: -2px;
+}
+
+.signup-text p {
+  font-size: 14px;
+  color: #000000;
+  margin-bottom: 20px;
+  display: flex;
+      justify-content: center;
+      margin-top: 20px;
+}
+
+
+
+
+.input-groups {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ececec;
+  border-radius: 8px;
+  padding: 5px 5px 4px 15px;
+  margin-bottom: 7px;
+  position: relative;
+  width: 115%;
+  
+}
+.input-groups input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 5px;
+  margin-bottom: 0px;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+}
+
+/* Login Button */
+.login-btn {
+  width: 115%;
+  padding: 12px;
+  background-color: #E0E2D9;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 35px;
+  transition: background-color 0.3s;
+  border-radius: 64px;
+  color: #A8AAA2;
+  margin-bottom: 30px;
+  transition: opacity 0.3s ease, background-color 0.3s ease, transform 0.2s ease;
+
+}
+.eye-icon {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    background: transparent;
+}
+  
+/* Hover effect */
+.login-btn:hover {
+  background-color: #28A263;
+  color: white;
+  transform: scale(1.05); /* Slightly enlarge the button */
+
+}
+
+/* Forgot Password & Signup Links */
+.forgot-password,
+.signup-text span {
+  text-align: center;
+  font-size: 14px;
+  color: #28a263;
+  text-decoration: underline;
+}
+.signup-text{
+font-weight: 400;
+font-size: 14px;
+line-height: 21px;
+letter-spacing: 0%;
+text-decoration: underline;
+text-decoration-style: solid;
+text-decoration-offset: Auto;
+text-decoration-thickness: Auto;
+
+}
+/* reCAPTCHA Text - Sticks to the bottom */
+.recaptcha-text {
+  font-size: 12px;
+  color: #676B5F;
+  text-align: center;
+  position: absolute;
+  bottom: 2rem;
+  font-family: Inter;
+}
+
+.recaptcha-text a{
+    color: #676B5F;
+    font-family: Inter;
+}
+/* Right Section */
+.login-right {
+  width: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background: #f4f4f4;
+}
+
+/* Image with Overlay */
+.right-img1 {
+  width: 100%;
+}
+
+.image-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.5));
+}
+
+.error-msg {
+  color: red;
+  font-size: 14px;
+  margin-top: 2px;
+}
+
+.general {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+  }
+
+  .login-left,
+  .login-right {
+    width: 100%;
+  }
+
+  .login-right {
+    height: 40vh;
+  }
+
+  /* Adjust for smaller screens */
+  .recaptcha-text {
+    bottom: 1rem;
+  }
+}
